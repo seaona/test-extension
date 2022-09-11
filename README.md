@@ -1,6 +1,6 @@
 # Test Extension
 This is a simple extension that can be used for testing MetaMask connection using `metamask-inpage-provider` and `extension-port-stream`.
-- `Master` branch is a Manifest V2 Chrome extension
+- `Main` branch is a Manifest V2 Chrome extension
 - `MV3` branch will be a Manifest V3 Chrome extension
 
 ## Setup
