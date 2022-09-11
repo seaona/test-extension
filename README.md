@@ -13,5 +13,5 @@ This is a simple extension that can be used for testing MetaMask connection usin
 7. Click Connect to MetaMask
 
 ## TODO
-- [] Connect to MetaMask using MV2
-- [] Connect to MetaMask using MV3
+- [ ] Connect to MetaMask using MV2
+- [ ] Connect to MetaMask using MV3
