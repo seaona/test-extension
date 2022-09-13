@@ -1,9 +1,18 @@
 # Test Extension
-This is a simple extension that can be used for testing MetaMask connection using `metamask-inpage-provider` and `extension-port-stream`.
-- `Main` branch is a Manifest V2 Chrome extension
-- `MV3` branch will be a Manifest V3 Chrome extension
+This is a simple extension that can be used for testing the MetaMask provider using `@metamask/providers`.
 
 ![popup](./images/popup.png)
+
+## MV2 and MV3
+This repository provides 2 types of extension, that you can load using the different github branches:
+- `main` branch is a Manifest V2 Chrome extension and should be paired with a MetaMask MV2 version
+- `mv3` branch is a Manifest V3 Chrome extension and should be paired with a MetaMask MV3 version
+
+## Relevant Code
+
+- The `extension/src/main.js` file contains the necessary code for importing MetaMask providers.
+- This function is then called on `extension/src/App.js`.
+- On the file `manifest.json` the extension is defined either as an MV2 or an MV3 type.
 
 ## Setup
 1. Install MetaMask on Chrome
