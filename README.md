@@ -1,7 +1,7 @@
 # Test Extension
 This is a simple extension that can be used for testing MetaMask connection using `@metamask/providers`.
 - `main` branch is a Manifest V2 Chrome extension
-- `MV3` branch will be a Manifest V3 Chrome extension
+- `mv3` branch is a Manifest V3 Chrome extension
 
 ![popup](./images/popup.png)
 
