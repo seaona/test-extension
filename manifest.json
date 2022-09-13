@@ -1,6 +1,6 @@
 {
-    "short_name": "Test Extension",
-    "name": "Test Extension",
+    "short_name": "Test Extension MV2",
+    "name": "Test Extension MV2",
     "version": "1.0.0",
     "manifest_version": 2,
     "permissions": [
