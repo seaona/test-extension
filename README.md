@@ -3,6 +3,8 @@ This is a simple extension that can be used for testing MetaMask connection usin
 - `Main` branch is a Manifest V2 Chrome extension
 - `MV3` branch will be a Manifest V3 Chrome extension
 
+![popup](./images/extension-popup.png)
+
 ## Setup
 1. Install MetaMask on Chrome
 2. Clone this repository
