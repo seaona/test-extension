@@ -1,5 +1,5 @@
 import './App.css';
-import { providerOld, providerNew } from './main';
+import { providerOld } from './main';
 
 function App() {
   const address = "";

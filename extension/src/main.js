@@ -16,5 +16,5 @@ export async function providerOld() {
   console.log(balance)
 
   // perform MetaMask action
-  await web3.eth.personal.sign('Test', account.toLowerCase(), '');
+  await web3.eth.personal.sign('This is a message from Test Extension', account.toLowerCase(), '');
 }
