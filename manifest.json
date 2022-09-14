@@ -3,6 +3,10 @@
     "name": "Test Extension MV2",
     "version": "1.0.0",
     "manifest_version": 2,
+    "background": {
+      "page": "/extension/src/background.html",
+      "persistent": true
+    },
     "permissions": [
       "storage",
       "tabs",
