@@ -1,7 +1,6 @@
 import createMetaMaskProvider from 'metamask-extension-provider';
 import Web3 from 'web3';
 import { createExternalExtensionProvider } from '@metamask/providers';
-import LocalMessageDuplexStream from 'post-message-stream';
 
 export async function providerOld() {
 
@@ -9,7 +8,7 @@ export async function providerOld() {
   const prov = createMetaMaskProvider();
   const web3 = new Web3(prov);
 
-  // get MetaMask data
+  // connect MetaMask account
   const accounts = await web3.eth.requestAccounts();
   const account = accounts[0];
   console.log(account)
@@ -28,7 +27,17 @@ export async function providerNew() {
   const provider = createExternalExtensionProvider();
   console.log(provider)
 
-  provider.request({ method: 'eth_requestAccounts'  })
+  // TODO: detect provider package (global)| wait for initialized event
+  
+  // connect MetaMask account
+  const accounts = await provider.request({ method: 'eth_requestAccounts' });
+  const account = accounts[0];
+  console.log(account)
+
   // perform MetaMask action
-  await window.ethereum.personal.sign('This is a message from the Test Extension', window.ethereum.selectedAddress.toLowerCase(), '');
+  await provider.request({ 
+    method: 'eth_sign',
+    params: [ account, '0x9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08']
+  })
+
 }

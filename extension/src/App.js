@@ -1,23 +1,27 @@
 import './App.css';
-import { providerOld } from './main';
+import { providerOld, providerNew } from './main';
 
 function App() {
-  const address = "";
-  const balance = "";
   return (
     <div className="App">
       <header className="App-header">
-        <button onClick={providerOld}>
-          Connect to MetaMask
-        </button>
       </header>
       <div className="App-body">
+
         <div>
-          MetaMask Selected Address: {address}
+          Using metamask-extension-provider
         </div>
+        <button onClick={providerOld}>
+          Connect to MM and Sign
+        </button>
+
         <div>
-          Selected Address Balance: {balance}
+          Using @metamask/providers
         </div>
+        <button onClick={providerNew}>
+          Connect to MM and Sign
+        </button>
+        
       </div>
     </div>
   );
