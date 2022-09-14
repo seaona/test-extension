@@ -1,4 +1,4 @@
-import { initializeProvider } from '../node_modules/@metamask/providers';
+import { createExternalExtensionProvider } from '../node_modules/@metamask/providers';
 import LocalMessageDuplexStream from '../node_modules/post-message-stream';
 
 async function providerNew() {
@@ -10,10 +10,8 @@ async function providerNew() {
   });
   
   // this will initialize the provider and set it as window.ethereum
-  initializeProvider({
-    connectionStream: metamaskStream,
-  });
-  console.log(window.ethereum)
+  const provider = createExternalExtensionProvider();
+  console.log(provider)
 
   // get MetaMask data
   console.log(window.ethereum.selectedAddress)
