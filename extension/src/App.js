@@ -1,20 +1,22 @@
 import './App.css';
-import { provider } from './main';
+import { providerOld, providerNew } from './main';
 
 function App() {
+  const address = "";
+  const balance = "";
   return (
     <div className="App">
       <header className="App-header">
-        <button onClick={provider}>
+        <button onClick={providerOld}>
           Connect to MetaMask
         </button>
       </header>
       <div className="App-body">
         <div>
-          MetaMask Chain Id: 
+          MetaMask Selected Address: {address}
         </div>
         <div>
-          MetaMask Selected Address: 
+          Selected Address Balance: {balance}
         </div>
       </div>
     </div>

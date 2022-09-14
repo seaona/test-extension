@@ -1,16 +1,23 @@
-import { initializeProvider } from '@metamask/providers';
-import LocalMessageDuplexStream from 'post-message-stream';
+import createMetaMaskProvider from 'metamask-extension-provider';
+import Web3 from 'web3';
 
-// Create a stream to a remote provider:
-export async function provider() {
-  const metamaskStream = new LocalMessageDuplexStream({
-    name: 'inpage',
-    target: 'contentscript',
-  });
-  
-  // this will initialize the provider and set it as window.ethereum
-  initializeProvider({
-    connectionStream: metamaskStream,
-  });
-  console.log(window.ethereum)
+export async function providerOld() {
+
+  // set MetaMask provider
+  const prov = createMetaMaskProvider();
+  const web3 = new Web3(prov);
+
+  // get MetaMask data
+  const accounts = await web3.eth.requestAccounts();
+  const account = accounts[0];
+  console.log(account)
+
+  const balance = await web3.eth.getBalance(account)
+  console.log(balance)
+
+  // perform MetaMask action
+  await web3.eth.personal.sign('Test', account.toLowerCase(), '');
+  await web3.eth.defaultChain()
+  await web3.eth.getTransactionCount()
+  await web3.eth.sendSignedTransaction("0xsdfjsdñfjksdl")
 }
