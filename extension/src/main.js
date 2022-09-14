@@ -17,7 +17,4 @@ export async function providerOld() {
 
   // perform MetaMask action
   await web3.eth.personal.sign('Test', account.toLowerCase(), '');
-  await web3.eth.defaultChain()
-  await web3.eth.getTransactionCount()
-  await web3.eth.sendSignedTransaction("0xsdfjsdñfjksdl")
 }
