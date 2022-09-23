@@ -1,7 +1,7 @@
 # Test Extension
 This is a simple extension that can be used for testing the use of MetaMask provider from another extension.
 
-![popup](./images/popup.png)
+![popup](./images/pop-up.png)
 
 ## MV2 and MV3
 This repository provides 2 types of extension, that you can load using the different github branches:
