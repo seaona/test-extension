@@ -26,8 +26,6 @@ export async function providerNew() {
   // set MetaMask provider
   const provider = createExternalExtensionProvider();
   console.log(provider)
-
-  // TODO: detect provider package (global)| wait for initialized event
   
   // connect MetaMask account
   const accounts = await provider.request({ method: 'eth_requestAccounts' });
