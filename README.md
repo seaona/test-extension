@@ -15,5 +15,7 @@ The `extension/src/main.js` file contains the necessary code for importing MetaM
 3. Change to extension folder and install dependencies `cd extension npm i`
 4. Build the extension `npm run extension`
 5. Import extension ***root folder*** into Chrome
-6. Click Connect to MetaMask
-7. Check background console and verify that `window.ethereum` is injected correctly
+6. Click on the Test Extension Icon
+7. Right click on the Test Extension and open the developer console
+6. Click Connect to MetaMask for testing the desired dependency and check the console
+
